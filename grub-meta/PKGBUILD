@@ -1,0 +1,18 @@
+pkgname=grub-meta
+pkgver=2
+pkgrel=1
+pkgdesc='Meta package for grub'
+arch=(any)
+url='https://github.com/FlyInWind1/archlinux-pkgs'
+license=('GPL')
+depends=(grub)
+optdepends=(
+    arch-install-scripts
+    efibootmgr
+    grub2-editor-frameworks
+    grub-theme-slaze-git
+    grub-theme-stylish-git
+    grub-theme-tela-git
+    grub-theme-vimix-git
+    os-prober
+)
