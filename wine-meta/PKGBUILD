@@ -1,0 +1,9 @@
+pkgname=wine-meta
+pkgver=1
+pkgrel=1
+pkgdesc='wine meta package'
+arch=(any)
+url='https://github.com/FlyInWind1/archlinux-pkgs'
+license=('GPL')
+depends=(wine)
+optdepends=(wine_gecko wine-mono winetricks)
