@@ -1,0 +1,8 @@
+pkgname=archlinux-repos
+pkgver=1
+pkgrel=1
+pkgdesc='archlinux repository packages'
+arch=(any)
+url='https://github.com/FlyInWind1/archlinux-pkgs'
+license=('GPL')
+optdepends=(archlinuxcn-keyring  archlinuxcn-mirrorlist-git jerryxiao-keyrin)
