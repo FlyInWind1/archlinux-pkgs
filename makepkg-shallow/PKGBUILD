@@ -1,0 +1,20 @@
+# copy from https://gist.github.com/andrewgregory/770cbedfa2da3817d762483155a330b8
+
+pkgname=makepkg-shallow
+pkgver=1
+pkgrel=1
+pkgdesc='makepkg with shallow clone'
+arch=(any)
+url='https://github.com/FlyInWind1/archlinux-pkgs'
+license=('GPL')
+depends=()
+optdepends=()
+source=('makepkg-shallow')
+sha256sums=('f8b337e40eedc9866ab7d287bd6490502ac4d0ccd758d171a00a9f48a19d2199')
+
+package(){
+    _bindir=$pkgdir/usr/bin
+    install -d $_bindir
+
+    install $srcdir/makepkg-shallow $_bindir
+}
