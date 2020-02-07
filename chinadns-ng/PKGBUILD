@@ -1,0 +1,21 @@
+pkgname=chinadns-ng
+pkgver=v1.0beta.15
+pkgrel=1
+pkgdesc='Meta package'
+arch=(any)
+url='https://github.com/zfl9/chinadns-ng'
+license=('AGPL')
+depends=()
+optdepends=()
+source=('git+https://github.com/zfl9/chinadns-ng#tag=latest')
+sha256sums=('SKIP')
+
+package(){
+    _srcdir=$srcdir/chinadns-ng
+    _bindir=$pkgdir/usr/bin
+    install -d $_bindir
+
+    cd $_srcdir
+    make
+    install $_srcdir/chinadns-ng $_bindir
+}
