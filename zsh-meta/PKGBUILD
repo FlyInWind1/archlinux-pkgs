@@ -5,5 +5,5 @@ pkgdesc='Meta package for zsh'
 arch=(any)
 url='https://github.com/FlyInWind1/archlinux-pkgs'
 license=('GPL')
-depends=(autojump fzf zsh zsh-autosuggestions oh-my-zsh-git zsh-completions)
-optdepends=(pkgfile zsh-fast-syntax-highlighting zsh-theme-powerlevel10k)
+depends=(zsh oh-my-zsh-git zsh-completions)
+optdepends=(autojump fzf pkgfile zsh-fast-syntax-highlighting zsh-autosuggestions zsh-theme-powerlevel10k)

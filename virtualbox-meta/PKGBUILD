@@ -1,0 +1,9 @@
+pkgname=virtualbox-meta
+pkgver=1
+pkgrel=1
+pkgdesc='Meta package'
+arch=(any)
+url='https://github.com/FlyInWind1/archlinux-pkgs'
+license=('GPL')
+depends=(virtualbox)
+optdepends=(virtualbox-ext-oracle virtualbox-guest-iso)
