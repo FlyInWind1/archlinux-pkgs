@@ -1,0 +1,9 @@
+pkgname=nextcloud-meta
+pkgver=1
+pkgrel=1
+pkgdesc='Meta package'
+arch=(any)
+url='https://github.com/FlyInWind1/archlinux-pkgs'
+license=('GPL')
+depends=(nextcloud php-intl)
+optdepends=(nextcloud-systemd-timers php-fpm php-imagick php-redis)
