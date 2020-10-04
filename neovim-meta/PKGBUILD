@@ -1,9 +1,9 @@
 pkgname=neovim-meta
 pkgver=1
-pkgrel=2
+pkgrel=3
 pkgdesc='Meta package for neovim'
 arch=(any)
 url='https://github.com/FlyInWind1/archlinux-pkgs'
 license=('GPL')
-depends=(neovim)
-optdepends=(prettier neovim-symlinks python-neovim)
+depends=(neovim neovim-symlinks)
+optdepends=(prettier python-neovim)
