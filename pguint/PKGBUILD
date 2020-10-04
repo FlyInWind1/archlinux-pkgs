@@ -1,0 +1,18 @@
+# shellcheck shell=bash disable=SC2034
+pkgname=pguint
+pkgver=1
+pkgrel=1
+pkgdesc='Unsigned and other extra integer types for PostgreSQL'
+arch=(any)
+url='git+https://github.com/petere/pguint'
+license=('PostgreSQL')
+source=("git+https://github.com/petere/pguint")
+md5sums=("SKIP")
+depends=(postgresql)
+makedepends=(llvm)
+package() {
+    cd "$srcdir/pguint" || exit
+    make
+    # shellcheck disable=SC2154
+    make -e DESTDIR="$pkgdir" install
+}
