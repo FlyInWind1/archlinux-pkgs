@@ -1,3 +1,6 @@
 [submodule "zsh-fast-syntax-highlighting"]
 	path = zsh-fast-syntax-highlighting
 	url = ssh://aur@aur.archlinux.org/zsh-fast-syntax-highlighting.git
+[submodule "navicat15-premium-cs"]
+	path = navicat15-premium-cs
+	url = ssh://aur@aur.archlinux.org/navicat15-premium-cs.git
