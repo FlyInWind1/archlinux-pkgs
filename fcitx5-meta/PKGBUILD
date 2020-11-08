@@ -3,4 +3,4 @@ pkgver=1
 pkgrel=1
 arch=(any)
 depends=(fcitx5)
-optdepends=(fcitx5-chinese-addons fcitx5-material-color fcitx5-pinyin-zhwiki kcm-fcitx5)
+optdepends=(fcitx5-chinese-addons fcitx5-material-color fcitx5-pinyin-moegirl fcitx5-pinyin-zhwiki kcm-fcitx5)

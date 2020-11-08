@@ -1,9 +1,9 @@
 pkgname=FlyInWind-cli-tools-meta
 pkgver=2
-pkgrel=3
+pkgrel=4
 pkgdesc='Meta package include cli tools used myself'
 arch=(any)
 url='https://github.com/FlyInWind1/archlinux-pkgs'
 license=('GPL')
 depends=(byobu htop man-pages-zh_cn openssh sudo unzip wget tree neovim-meta yay zsh-meta)
-optdepends=(archlinux-repos colordiff makepkg-shallow net-tools proxychains-ng sshpass zsh-fast-syntax-highlighting zsh-theme-powerlevel10k)
+optdepends=(archlinux-repos colordiff makepkg-shallow net-tools proxychains-ng rsync sshpass zsh-fast-syntax-highlighting zsh-theme-powerlevel10k)

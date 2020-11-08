@@ -5,5 +5,5 @@ pkgdesc='Meta package for my computer'
 arch=(any)
 url='https://github.com/FlyInWind1/archlinux-pkgs'
 license=('GPL')
-depends=(xf86-video-intel)
-optdepends=(intel-ucode nvidia vulkan-intel)
+depends=()
+optdepends=(amd-ucode intel-ucode nvidia vulkan-intel xf86-video-intel)
