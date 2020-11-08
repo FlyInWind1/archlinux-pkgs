@@ -1,0 +1,36 @@
+pkgname=FlyInWind-desktop-meta
+pkgver=1
+pkgrel=1
+pkgdesc='Meta packagefor self use apps'
+arch=(any)
+url='https://github.com/FlyInWind1/archlinux-pkgs'
+license=('GPL')
+depends=(
+    kdeconnect
+    netease-cloud-music
+    drivers-meta
+    FlyInWind-kde-meta
+    grub-meta
+)
+optdepends=(
+    bleachbit
+    fcitx5-meta
+    goldendict
+    ibus-libpinyin
+    kaccounts-providers
+    kcalc ksystemlog
+    optimus-manager-qt-kde
+    pamac-aur
+    teamviewer
+    telegram-desktop
+    vlc
+    vmware-workstation
+    virtualbox-meta
+    wine-meta
+    wps-office
+    youdao-dict
+    nerd-fonts-complete
+    plymouth-meta
+    firefox-i18n-zh-on
+    google-chrome
+)
