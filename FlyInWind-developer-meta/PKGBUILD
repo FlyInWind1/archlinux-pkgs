@@ -1,0 +1,28 @@
+pkgname=FlyInWind-developer-meta
+pkgver=1
+pkgrel=1
+pkgdesc='Meta package'
+arch=(any)
+url='https://github.com/FlyInWind1/archlinux-pkgs'
+license=('GPL')
+optdepends=(
+    ccache
+    docker
+    gradle
+    gradle-src
+    jprofiler
+    mariadb-jdbc
+    maven
+    meta-group-base-devel
+    microsoft-edge-dev-bin
+    mysql-connector-java
+    navicat15-premium-cs
+    npm
+    pguint
+    postgresql-jdbc
+    postman
+    redis
+    ttf-jetbrains-mono
+    visual-studio-code-bin
+    zip
+)
