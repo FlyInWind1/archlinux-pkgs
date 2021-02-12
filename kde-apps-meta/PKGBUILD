@@ -5,4 +5,4 @@ pkgdesc='Meta package for kde apps'
 arch=(any)
 url='https://github.com/FlyInWind1/archlinux-pkgs'
 depends=(ark dolphin filelight gwenview konsole kate kdeconnect spectacle partitionmanager)
-optdepends=(kfind latte-dock)
+optdepends=(kfind latte-dock plasma5-applets-tiledmenu)
