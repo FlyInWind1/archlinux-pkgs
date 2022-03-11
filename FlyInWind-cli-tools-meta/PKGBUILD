@@ -6,4 +6,4 @@ arch=(any)
 url='https://github.com/FlyInWind1/archlinux-pkgs'
 license=('GPL')
 depends=(base byobu htop man-pages-zh_cn openssh sudo unzip wget tree neovim-meta yay zsh-meta)
-optdepends=(advcpmv archlinux-repos colordiff gradle-zsh-completion makepkg-shallow net-tools proxychains-ng rsync sshpass zsh-fast-syntax-highlighting zsh-theme-powerlevel10k)
+optdepends=(advcpmv archlinux-repos colordiff gradle-zsh-completion makepkg-shallow man-pages net-tools proxychains-ng rsync sshpass zsh-fast-syntax-highlighting zsh-theme-powerlevel10k)
