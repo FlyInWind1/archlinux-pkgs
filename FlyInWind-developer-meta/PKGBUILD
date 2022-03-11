@@ -10,6 +10,7 @@ optdepends=(
     docker
     gradle
     gradle-src
+    jetbrains-toolbox
     jprofiler
     mariadb-jdbc
     maven
