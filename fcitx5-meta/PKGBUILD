@@ -1,6 +1,6 @@
 pkgname=fcitx5-meta
 pkgver=1
-pkgrel=1
+pkgrel=2
 arch=(any)
 depends=(fcitx5)
-optdepends=(fcitx5-chinese-addons fcitx5-material-color fcitx5-pinyin-moegirl fcitx5-pinyin-zhwiki kcm-fcitx5)
+optdepends=(fcitx5-chinese-addons fcitx5-gtk fcitx5-material-color fcitx5-pinyin-moegirl fcitx5-pinyin-zhwiki kcm-fcitx5)
