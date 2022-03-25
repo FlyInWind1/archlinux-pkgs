@@ -1,22 +1,49 @@
 #!/bin/python3
 
+import glob
 import json
-import os.path
+import os
 import re
+import shutil
 import sys
+from datetime import datetime, timedelta
+from os import path
 
-pattern = re.compile(r'(\d|[A-Z]){10,}')
+date_formate = '%Y-%m-%dT%H:%M:%S'
+config_home = path.expandvars('$HOME') + '/.config/'
+navicat_conf_dir = config_home + 'navicat/'
+if path.exists(navicat_conf_dir):
+    now = datetime.now()
+    # 备份设置目录
+    now_str = now.strftime('%Y-%m-%dT%H:%M:%S')
+    backup_dir = config_home + 'navicat-' + now_str
+    shutil.copytree(navicat_conf_dir, backup_dir)
+    # 删除多余备份
+    oldest_datetime = now - timedelta(days=14)
+    backup_dirs = glob.glob(config_home + 'navicat-*')
+    backup_dirs.sort()
+    for index, backup_dir in enumerate(backup_dirs):
+        # 最多保存 10 个备份
+        if index > 9:
+            shutil.rmtree(backup_dir)
+            continue
+        if index > 2:
+            # 至少保存 3 个备份
+            dir_name = path.basename(backup_dir)
+            backup_date_str = dir_name.replace('navicat-', '')
+            backup_datetime = datetime.strptime(backup_date_str, date_formate)
+            if backup_datetime < oldest_datetime:
+                # 删除 14 天前的备份
+                shutil.rmtree(backup_dir)
 
-user_home = os.path.expandvars('$HOME') + '/'
-Premium_path = user_home + '.config/navicat/Premium/'
-
-preferences_json_path = Premium_path + 'preferences.json'
-if os.path.exists(preferences_json_path):
+    # 清除试用记录
+    Premium_path = navicat_conf_dir + 'Premium/'
+    preferences_json_path = Premium_path + 'preferences.json'
     preferences_json_file = open(preferences_json_path)
     preferences_json: dict = json.load(preferences_json_file)
 
     for key in list(preferences_json.keys()):
-        if pattern.match(key):
+        if re.match(r'(\d|[A-Z]){10,}', key):
             preferences_json.pop(key)
     print('修改' + preferences_json_path + '文件')
     preferences_json_file.close()
@@ -24,10 +51,10 @@ if os.path.exists(preferences_json_path):
     json.dump(preferences_json, preferences_json_file)
     preferences_json_file.close()
 
-usage_db_path = Premium_path + 'usage.db'
-if os.path.exists(usage_db_path):
-    print('删除' + usage_db_path + '文件')
-    os.remove(usage_db_path)
+    usage_db_path = Premium_path + 'usage.db'
+    if path.exists(usage_db_path):
+        print('删除' + usage_db_path + '文件')
+        os.remove(usage_db_path)
 
 argv = sys.argv
 if len(argv) > 1:
