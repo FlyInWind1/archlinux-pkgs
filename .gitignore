@@ -2,3 +2,6 @@
 .idea
 pkg/
 src/
+*.whl
+*.tar.zst
+*.tar.zst.sig

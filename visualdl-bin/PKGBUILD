@@ -1,0 +1,21 @@
+# Maintainer: Carlos Aznarán <caznaranl@uni.pe>
+# Contributor: Sam L. Yes <samlukeyes123@gmail.com>
+_name=visualdl
+pkgname=${_name}-bin
+provides=(${_name})
+conflicts=(${_name})
+pkgver=2.2.3
+pkgrel=4
+pkgdesc="Deep Learning Visualization Toolkit"
+url="https://github.com/PaddlePaddle/${pkgname}"
+depends=(python-baidubce flake8 python-flask-babel python-pillow python-protobuf python-requests python-matplotlib python-pandas)
+makedepends=(python-pre-commit shellcheck rustup npm yarn) # python-setuptools
+license=('Apache2')
+arch=('any')
+source=("https://files.pythonhosted.org/packages/87/c8/10d0d24822637d8e5493a73ad118640530195e45b1c71ae0e60606ff5f0e/visualdl-${pkgver}-py3-none-any.whl")
+sha512sums=('SKIP')
+  
+package() {
+  PIP_CONFIG_FILE=/dev/null pip install --isolated --root="${pkgdir}" --ignore-installed --no-deps ./*whl
+  python -O -m compileall "${pkgdir}$(python -c "import site; print(site.getsitepackages()[0])")/${_base}"
+}
