@@ -4,3 +4,6 @@
 [submodule "navicat15-premium-cs"]
 	path = navicat15-premium-cs
 	url = ssh://aur@aur.archlinux.org/navicat15-premium-cs.git
+[submodule "navicat16-premium-cs"]
+	path = navicat16-premium-cs
+	url = ssh://aur@aur.archlinux.org/navicat16-premium-cs.git
