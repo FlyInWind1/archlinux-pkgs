@@ -1,6 +1,6 @@
 pkgname=FlyInWind-desktop-meta
 pkgver=1
-pkgrel=1
+pkgrel=2
 pkgdesc='Meta packagefor self use apps'
 arch=(any)
 url='https://github.com/FlyInWind1/archlinux-pkgs'
@@ -23,6 +23,7 @@ optdepends=(
     pamac-aur
     teamviewer
     telegram-desktop
+    ttf-ms-win11-zh_cn
     vlc
     vmware-workstation
     virtualbox-meta
