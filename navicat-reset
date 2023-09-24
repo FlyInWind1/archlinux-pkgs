@@ -39,22 +39,23 @@ if path.exists(navicat_conf_dir):
     # 清除试用记录
     Premium_path = navicat_conf_dir + 'Premium/'
     preferences_json_path = Premium_path + 'preferences.json'
-    preferences_json_file = open(preferences_json_path)
-    preferences_json: dict = json.load(preferences_json_file)
+    if os.path.exists(preferences_json_path):
+        preferences_json_file = open(preferences_json_path)
+        preferences_json: dict = json.load(preferences_json_file)
 
-    for key in list(preferences_json.keys()):
-        if re.match(r'(\d|[A-Z]){10,}', key):
-            preferences_json.pop(key)
-    print('修改' + preferences_json_path + '文件')
-    preferences_json_file.close()
-    preferences_json_file = open(preferences_json_path, mode='w')
-    json.dump(preferences_json, preferences_json_file)
-    preferences_json_file.close()
+        for key in list(preferences_json.keys()):
+            if re.match(r'(\d|[A-Z]){10,}', key):
+                preferences_json.pop(key)
+        print('修改' + preferences_json_path + '文件')
+        preferences_json_file.close()
+        preferences_json_file = open(preferences_json_path, mode='w')
+        json.dump(preferences_json, preferences_json_file)
+        preferences_json_file.close()
 
     usage_db_path = Premium_path + 'usage.db'
-    if path.exists(usage_db_path):
-        print('删除' + usage_db_path + '文件')
-        os.remove(usage_db_path)
+    for p in glob.glob(usage_db_path + '*'):
+        print('删除' + p + '文件')
+        os.remove(p)
 
 argv = sys.argv
 if len(argv) > 1:
