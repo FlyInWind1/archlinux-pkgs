@@ -1,0 +1,15 @@
+pkgname=certbot-dns-aliyun
+pkgver=2.0.0
+pkgrel=1
+pkgdesc="Dynu DNS Authenticator plugin for Certbot"
+arch=('any')
+url="https://github.com/tengattack/${pkgname}"
+license=('Apache')
+depends=('certbot' 'certbot-nginx' 'python-acme')
+source=("https://files.pythonhosted.org/packages/b3/b0/aed9384ee7f0850218ccd2ea9ad2b9993cb6216b5faa242555681799123a/certbot_dns_aliyun-${pkgver}-py2.py3-none-any.whl")
+sha256sums=('SKIP')
+
+package() {
+  pip install --isolated --root="${pkgdir}" --ignore-installed --no-deps ./*.whl
+  python -O -m compileall "${pkgdir}$(python -c "import site; print(site.getsitepackages()[0])")/${_base}"
+}
