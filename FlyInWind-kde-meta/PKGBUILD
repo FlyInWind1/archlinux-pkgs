@@ -1,9 +1,9 @@
 pkgname=FlyInWind-kde-meta
-pkgver=1
+pkgver=2
 pkgrel=1
 pkgdesc='Meta packagefor kde desktop'
 arch=(any)
 url='https://github.com/FlyInWind1/archlinux-pkgs'
 license=('GPL')
-depends=(kde-apps-meta plasma-desktop plasma-wayland-session systemd-kcm)
-optdepends=(better-plasma5-video-wallpaper-git fancontrol-kcm plasma-meta kde-servicemenus-rootactions kde-themes-meta noto-fonts-cjk)
+depends=(kde-apps-meta plasma-desktop)
+optdepends=(fancontrol-kcm plasma-meta kde-servicemenus-rootactions kde-themes-meta noto-fonts-cjk)
